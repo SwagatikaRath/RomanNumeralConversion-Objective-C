@@ -14,6 +14,7 @@
 		A7D3A8B61BB8C1A300D209FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D3A8B51BB8C1A300D209FE /* Images.xcassets */; };
 		A7D3A8B91BB8C1A300D209FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D3A8B71BB8C1A300D209FE /* LaunchScreen.xib */; };
 		A7D3A8C51BB8C1A300D209FE /* RomanNumeralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D3A8C41BB8C1A300D209FE /* RomanNumeralTests.m */; };
+		A7D3A8D51BB9187000D209FE /* RomanNumeralTestFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D3A8D41BB9187000D209FE /* RomanNumeralTestFile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A7D3A8BE1BB8C1A300D209FE /* RomanNumeralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanNumeralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D3A8C31BB8C1A300D209FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D3A8C41BB8C1A300D209FE /* RomanNumeralTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RomanNumeralTests.m; sourceTree = "<group>"; };
+		A7D3A8D41BB9187000D209FE /* RomanNumeralTestFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RomanNumeralTestFile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A7D3A8C41BB8C1A300D209FE /* RomanNumeralTests.m */,
+				A7D3A8D41BB9187000D209FE /* RomanNumeralTestFile.m */,
 				A7D3A8C21BB8C1A300D209FE /* Supporting Files */,
 			);
 			path = RomanNumeralTests;
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D3A8D51BB9187000D209FE /* RomanNumeralTestFile.m in Sources */,
 				A7D3A8C51BB8C1A300D209FE /* RomanNumeralTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -347,7 +351,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = RomanNumeral/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +363,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = RomanNumeral/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +424,7 @@
 				A7D3A8CA1BB8C1A300D209FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7D3A8CB1BB8C1A300D209FE /* Build configuration list for PBXNativeTarget "RomanNumeralTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +433,7 @@
 				A7D3A8CD1BB8C1A300D209FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

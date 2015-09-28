@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8WT-84-wLV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Navigation Controller-->
+        <scene sceneID="rVJ-o1-uRj">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <navigationController id="8WT-84-wLV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="292-g3-CI4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Piz-CI-H3t" kind="relationship" relationship="rootViewController" id="Ioq-DL-bOq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4K-ca-wc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-370" y="359"/>
+        </scene>
+        <!--RomanConversion-->
+        <scene sceneID="iOM-sR-ohj">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" id="Piz-CI-H3t" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DmM-Gq-PgM"/>
+                        <viewControllerLayoutGuide type="bottom" id="RlB-1V-Blu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7eU-gA-B7e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter Roman Numeral" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIB-Zp-XDK">
+                                <rect key="frame" x="0.0" y="65" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Piz-CI-H3t" id="2zi-Wh-fK5"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh1-EJ-ccu">
+                                <rect key="frame" x="97" y="255" width="406" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="PfT-Gm-vQ8"/>
+                                    <constraint firstAttribute="width" constant="406" id="yOA-fB-71w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GIB-Zp-XDK" secondAttribute="trailing" id="4aG-4V-POu"/>
+                            <constraint firstAttribute="centerX" secondItem="lh1-EJ-ccu" secondAttribute="centerX" id="AYF-H4-S8I"/>
+                            <constraint firstItem="GIB-Zp-XDK" firstAttribute="leading" secondItem="7eU-gA-B7e" secondAttribute="leading" id="GqA-Pe-fQU"/>
+                            <constraint firstItem="GIB-Zp-XDK" firstAttribute="top" secondItem="DmM-Gq-PgM" secondAttribute="bottom" constant="1" id="YIa-gr-6Jg"/>
+                            <constraint firstAttribute="centerY" secondItem="lh1-EJ-ccu" secondAttribute="centerY" constant="0.5" id="izN-nL-ccA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RomanConversion" id="TIQ-3s-pZK"/>
+                    <connections>
+                        <outlet property="resultingNumeralLabel" destination="lh1-EJ-ccu" id="cp4-dl-3uQ"/>
+                        <outlet property="searchNumerals" destination="GIB-Zp-XDK" id="wRf-Uq-gso"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fU1-7c-KYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="322"/>
         </scene>
     </scenes>
 </document>
